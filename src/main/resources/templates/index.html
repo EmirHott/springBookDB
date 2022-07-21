@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: lightblue">
+    <div class="container-fluid">
+        <a class="navbar-brand">BookDB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Contacts</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Join us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" th:href="@{/tosignup}">Signup</a></li>
+                        <li><a class="dropdown-item" th:href="@{/login}">Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!CONTENT!>
+<div>
+    <img src="https://i.ibb.co/qmcWdG7/staticc.png" class="img-fluid" alt="..." style="margin-bottom: 20px">
+</div>
+<div class="container-fluid p-0 overflow-hidden" style="margin-bottom: 20px">
+    <div class="row g-0">
+        <div  class="col-lg-6 order-lg-2 " style="min-height: 45vh; background-size: cover; background-position: center; background-image: url('https://images.gr-assets.com/misc/1650914513-1650914513_goodreads_misc.png');">
+
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto px-5 py-5">
+            <div class="lc-block">
+                <div editable="rich">
+                    <h1>Find your favorite Books.</h1>
+                    <p class="lead">Trying to find good books to read during your commute or planning out your summer reading early? There is nothing more daunting than going to a bookstore without a shopping list. So, make sure that your next read is going to be a good one.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-0">
+        <div  class="col-lg-6" style="min-height: 45vh; background-size: cover;background-position: center; background-image: url('https://images.gr-assets.com/misc/1650914538-1650914538_goodreads_misc.png');">
+        </div>
+        <div class="col-lg-6 my-auto px-5 py-5">
+            <div class="lc-block">
+                <div editable="rich">
+                    <h1>Make your own Notes.</h1>
+                    <p class="lead">Simple and easy to use note feature. Create notes tied to a book, set status and text. Your note can be edited or remove. To use it JOIN US!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!FOOTER!>
+<footer class="bg-primary text-white text-center text-lg-start mt-auto" >
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 id="aboutus" class="text-uppercase">About us</h5>
+                <p>
+                    The BookDB Library provides you with access to an amazing range of online resources to explore the subjects you are passionate about.
+                    We will also help you to keep track of books u read.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 id="contacts" class="text-uppercase">Contacts</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a class="text-white">bookdb@gmail.com</a>
+                    </li>
+                    <li>
+                        <a class="text-white">033/123-321</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a th:href="@{/tosignup}" class="text-white">Signup</a>
+                    </li>
+                    <li>
+                        <a th:href="@{/login}" class="text-white">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white">bookDB.com</a>
+    </div>
+</footer>
+
+</body>
+</html>
